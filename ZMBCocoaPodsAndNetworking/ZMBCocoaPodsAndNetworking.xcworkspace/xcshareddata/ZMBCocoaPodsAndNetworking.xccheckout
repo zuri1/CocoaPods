@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DA954008-AFC3-4073-BFF7-C5DAE0239E33</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ZMBCocoaPodsAndNetworking</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FD73B80F-C7BB-4BE8-8DA5-3A74E724C653</key>
+		<string>https://github.com/zuri1/CocoaPods</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ZMBCocoaPodsAndNetworking/ZMBCocoaPodsAndNetworking.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FD73B80F-C7BB-4BE8-8DA5-3A74E724C653</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zuri1/CocoaPods</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FD73B80F-C7BB-4BE8-8DA5-3A74E724C653</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FD73B80F-C7BB-4BE8-8DA5-3A74E724C653</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CocoaPods</string>
+		</dict>
+	</array>
+</dict>
+</plist>
