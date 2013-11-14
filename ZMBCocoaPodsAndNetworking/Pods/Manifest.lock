@@ -1,13 +1,19 @@
 PODS:
+  - FlickrKit (1.0.2)
   - JSONKit (1.5pre)
+  - JSONModel (0.10.0)
   - Reachability (3.0.0)
 
 DEPENDENCIES:
+  - FlickrKit (~> 1.0)
   - JSONKit (~> 1.4)
+  - JSONModel (~> 0.10.0)
   - Reachability (~> 3.0.0)
 
 SPEC CHECKSUMS:
+  FlickrKit: b096e8995b2e830c302f4a2c03e87242d5f9f63a
   JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
+  JSONModel: cecca3c3a9ee1a248b56f7139e2d64b85ce536ec
   Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
 
 COCOAPODS: 0.27.1

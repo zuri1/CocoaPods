@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-FlickrKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-JSONKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0ADA16C1A2C540278781CD01</key>
+		<key>21A1956483B94024B214F533</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E8EE8E2B02A44C79CE4BB78</key>
+		<key>99868602780444DFA4209030</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E12C2BC8565246209467F92B</key>
+		<key>B4DA35314A524D849F0DF08D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFBC91CDFB314FA7A306BBCE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB8659F2D0C34090BA7A7BF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
