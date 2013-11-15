@@ -14,4 +14,8 @@
 @property (nonatomic) IBOutlet UILabel *tempLabel;
 @property (nonatomic) IBOutlet UILabel *weatherLabel;
 
+@property (nonatomic) IBOutlet UITableView *tuckersTableView;
+
+@property (nonatomic) NSMutableArray *tuckerArray;
+
 @end
