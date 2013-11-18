@@ -23,6 +23,7 @@
 		8A8AD9D91831E878008B5EBE /* ZMBCocoaPodsAndNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8AD9D81831E878008B5EBE /* ZMBCocoaPodsAndNetworkingTests.m */; };
 		8AD1050318356999006505E4 /* ZMBFlickrPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1050218356999006505E4 /* ZMBFlickrPhotoModel.m */; };
 		8AD10506183573B5006505E4 /* ZMBPhotosModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD10505183573B5006505E4 /* ZMBPhotosModel.m */; };
+		8AD105091836BD90006505E4 /* ZMBPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD105081836BD90006505E4 /* ZMBPhotoTableViewCell.m */; };
 		99D69B0C3B5046188AFAE5E6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E934669930943E790F3EBA4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		8AD1050218356999006505E4 /* ZMBFlickrPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBFlickrPhotoModel.m; sourceTree = "<group>"; };
 		8AD10504183573B5006505E4 /* ZMBPhotosModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMBPhotosModel.h; sourceTree = "<group>"; };
 		8AD10505183573B5006505E4 /* ZMBPhotosModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBPhotosModel.m; sourceTree = "<group>"; };
+		8AD105071836BD90006505E4 /* ZMBPhotoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMBPhotoTableViewCell.h; sourceTree = "<group>"; };
+		8AD105081836BD90006505E4 /* ZMBPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMBPhotoTableViewCell.m; sourceTree = "<group>"; };
 		8E934669930943E790F3EBA4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,8 @@
 		8A8AD9B41831E878008B5EBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8AD105071836BD90006505E4 /* ZMBPhotoTableViewCell.h */,
+				8AD105081836BD90006505E4 /* ZMBPhotoTableViewCell.m */,
 				8AD10504183573B5006505E4 /* ZMBPhotosModel.h */,
 				8AD10505183573B5006505E4 /* ZMBPhotosModel.m */,
 				8AD1050118356999006505E4 /* ZMBFlickrPhotoModel.h */,
@@ -303,6 +308,7 @@
 			files = (
 				8A8AD9BE1831E878008B5EBE /* ZMBAppDelegate.m in Sources */,
 				8AD10506183573B5006505E4 /* ZMBPhotosModel.m in Sources */,
+				8AD105091836BD90006505E4 /* ZMBPhotoTableViewCell.m in Sources */,
 				8A8AD9BA1831E878008B5EBE /* main.m in Sources */,
 				8A8AD9C41831E878008B5EBE /* ZMBViewController.m in Sources */,
 				8AD1050318356999006505E4 /* ZMBFlickrPhotoModel.m in Sources */,

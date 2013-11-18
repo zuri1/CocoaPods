@@ -13,4 +13,7 @@
 
 @property (nonatomic) NSArray<ZMBFlickrPhotoModel> *photo;
 
+@property (nonatomic) NSString *title;
+
+
 @end

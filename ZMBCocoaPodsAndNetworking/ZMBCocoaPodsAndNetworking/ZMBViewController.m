@@ -10,18 +10,25 @@
 #import <JSONKit/JSONKit.h>
 #import <FlickrKit/FlickrKit.h>
 #import <JSONModel/JSONModel.h>
-#import "ZMBPhotosModel.h"
+#import "ZMBFlickrPhotoModel.h"
+#import "ZMBPhotoTableViewCell.h"
 
 @interface ZMBViewController ()
 
 @end
 
 @implementation ZMBViewController
+@synthesize theTableView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    
+    self.theTableView.delegate = self;
+    self.theTableView.dataSource = self;
+    
+    
     
     NSData *weatherData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/weather?q=Seattle,us"]];
     
@@ -48,9 +55,9 @@
     
     [[FlickrKit sharedFlickrKit] initializeWithAPIKey:@"c6506c0d2e8da8dadc72c4924f37828d" sharedSecret:@"a2bdae7dab12593d"];
     
-    FlickrKit *fk = [FlickrKit sharedFlickrKit];
+    FlickrKit *theFlickrKit = [FlickrKit sharedFlickrKit];
     
-    NSData *flickrData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=f3dcd6e63a3a7cca3752fbe5939e1c59&user_id=42145244%40N03&format=json&nojsoncallback=1&auth_token=72157637669376345-0f985f7cdefec834&api_sig=56f44e1de244fbe2b8bd4489874a3b5b"]];
+    NSData *flickrData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=61fa83ff424ba1f5d7c2ded9c9008d83&user_id=42145244%40N03&format=json&nojsoncallback=1&auth_token=72157637814740623-3f9e9cf5206687b0&api_sig=f7f5b9551663297f5d00a0343ea87b06"]];
     NSDictionary *flickrDict = [flickrData objectFromJSONData];
 
     NSDictionary *photosDict = [flickrDict objectForKey:@"photos"];
@@ -68,11 +75,15 @@
         [_tuckerArray addObject: tuckersModel];
     }
     
+    
     //ZMBPhotosModel *tuckersModel = [[ZMBPhotosModel alloc] initWithString:tuckerJSON error:&err];
     
     ZMBFlickrPhotoModel *individualPhoto = _tuckerArray[0];
     
     NSLog(@"%@", individualPhoto.owner);
+    
+    ZMBFlickrPhotoModel *testModel = [[ZMBFlickrPhotoModel alloc] init];
+    testModel.title = @"please work";
     
 }
 - (void)didReceiveMemoryWarning
@@ -94,6 +105,18 @@
 {
     // Return number of rows in section
     return _tuckerArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    ZMBPhotoTableViewCell *cell = [tableView
+                             dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    cell.title.text = [_tuckerArray[indexPath.row] title];
+
+    return cell;
 }
 
 - (IBAction)refreshButtonPressed
