@@ -15,7 +15,7 @@
     self = [super initWithString:string error:err];
     if (self) {
         _delegate = delegate;
-        _photoURL = [NSURL URLWithString:[NSString stringWithFormat:@"farm%d.staticflickr.com/%@/%@_%@.jpg", _farm, _server, _id, _secret]];
+        _photoURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://farm%d.staticflickr.com/%@/%@_%@.jpg", _farm, _server, _id, _secret]];
         if (_photo) {
             NSLog(@"Already Have Photo");
         } else {
