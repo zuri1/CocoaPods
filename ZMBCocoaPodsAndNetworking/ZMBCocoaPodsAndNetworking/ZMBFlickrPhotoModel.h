@@ -11,7 +11,14 @@
 @protocol ZMBFlickrPhotoModel
 @end
 
+@protocol ZMBFlickrPhotoModelDelegate
+- (void)imageWasDownloadedForRow:(NSInteger)rowNumber;
+@end
+
 @interface ZMBFlickrPhotoModel : JSONModel
+
+@property (nonatomic, weak) id<Optional, ZMBFlickrPhotoModelDelegate> delegate;
+
 @property (assign, nonatomic) int farm;
 @property (strong, nonatomic) NSString *id;
 @property (assign, nonatomic) int isfamily;
@@ -21,5 +28,11 @@
 @property (strong, nonatomic) NSString *secret;
 @property (strong, nonatomic) NSString *server;
 @property (strong, nonatomic) NSString *title;
+
+@property (strong, nonatomic) NSURL<Optional> *photoURL;
+@property (strong, nonatomic) UIImage<Optional> *photo;
+@property (nonatomic, strong) NSNumber<Optional> *rowNumber;
+
+- (id)initWithString:(NSString *)string error:(JSONModelError *__autoreleasing *)err andDelegate:(id)delegate;
 
 @end

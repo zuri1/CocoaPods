@@ -15,5 +15,6 @@
 @property (nonatomic) ZMBFlickrPhotoModel *model;
 
 @property (nonatomic) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UIImageView *photo;
 
 @end

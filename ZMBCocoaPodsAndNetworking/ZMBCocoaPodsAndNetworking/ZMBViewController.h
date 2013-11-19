@@ -10,13 +10,13 @@
 #import "ZMBFlickrPhotoModel.h"
 #import "ZMBPhotoTableViewCell.h"
 
-@interface ZMBViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ZMBViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ZMBFlickrPhotoModelDelegate>
 
 @property (nonatomic) IBOutlet UILabel *placeLabel;
 @property (nonatomic) IBOutlet UILabel *tempLabel;
 @property (nonatomic) IBOutlet UILabel *weatherLabel;
 
-@property (nonatomic) NSMutableArray *tuckerArray;
+@property (nonatomic, strong) NSMutableArray *tuckerArray;
 
 @property (weak, nonatomic) IBOutlet UITableView *theTableView;
 

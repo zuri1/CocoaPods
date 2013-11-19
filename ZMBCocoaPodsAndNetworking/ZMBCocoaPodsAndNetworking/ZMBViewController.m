@@ -54,7 +54,8 @@
     for (NSDictionary *individualPhoto in photoDict)
     {
         NSString *tuckerJSON = [individualPhoto JSONString];
-        ZMBFlickrPhotoModel *tuckersModel = [[ZMBFlickrPhotoModel alloc] initWithString:tuckerJSON error:&err];
+        ZMBFlickrPhotoModel *tuckersModel = [[ZMBFlickrPhotoModel alloc] initWithString:tuckerJSON error:&err andDelegate:self];
+        tuckersModel.rowNumber = [NSNumber numberWithInteger:[photoDict indexOfObject:individualPhoto]];
         [_tuckerArray addObject: tuckersModel];
     }
     
@@ -91,9 +92,17 @@
     ZMBPhotoTableViewCell *cell = [tableView
                              dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.title.text = [_tuckerArray[indexPath.row] title];
+    ZMBFlickrPhotoModel *cellPhoto = _tuckerArray[indexPath.row];
+    
+    cell.title.text = cellPhoto.title;
+    cell.photo.image = cellPhoto.photo;
 
     return cell;
+}
+
+- (void)imageWasDownloadedForRow:(NSInteger)rowNumber
+{
+    [theTableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:rowNumber inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
 }
 
 - (IBAction)refreshButtonPressed
